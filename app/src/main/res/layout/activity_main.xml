@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+<!--  Design da primeira Activity para com os campos requisitados, botoes de adicionar, excluir, estatistica  -->
+<!--  Campos de cadastro Nome, idade, sexo e IGG  -->
+<!--  Lista com os pacientes  -->
+
+
+<!--  Campos para preenchimento do nome  -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="19sp"
+        android:text="Nome:"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="19sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:inputType="text"
+        android:id="@+id/txtNome"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--  Campos para preenchimento da idade  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="25"
+            android:text="Idade:" />
+
+        <EditText
+            android:id="@+id/txtIdade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3015"
+            android:inputType="number"
+
+            android:textSize="19sp" />
+        <!--  Campos para preenchimento do sexo  -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:layout_weight="25"
+                android:text="Sexo:"
+                />
+        <!-- Spinner com as opcoes de sexo para escolher -->
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spnSexo"
+                android:layout_marginRight="15dp"
+                android:entries="@array/sexo"
+                android:layout_weight="25"
+                android:textSize="19sp"
+                />
+    </LinearLayout>
+    <!--  Campos para preenchimento do IGG  -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="19sp"
+        android:layout_marginLeft="15dp"
+        android:text="IGG: "/>
+
+    <!-- Radio group para escolher se o IGG é positivo ou não -->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/rgbIgg">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Positivo"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/rbdPositivo"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Negativo"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/rbdNegativo"/>
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- Botao de adicionar  -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adicionar"
+            android:layout_weight="50"
+            android:layout_marginTop="10dp"
+            android:textSize="19sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="#04B431"
+            android:id="@+id/btnAdicionar"/>
+        <!-- Botao de excluir -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Excluir"
+            android:layout_weight="50"
+            android:layout_marginTop="10dp"
+            android:textSize="19sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#B43104"
+            android:id="@+id/btnExcluir"/>
+        </LinearLayout>
+    <!-- Botao da estatistica para acessar a segunda activity -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estatística"
+        android:textSize="19sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:backgroundTint="#B45F04"
+        android:id="@+id/btnEstatistica"/>
+    <!--  Texto para identificação da Lista com os pacientes cadastrados  -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="19sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Lista de Pacientes:"/>
+    <!--  Lista com os pacientes  -->
+    <ListView
+        android:id="@+id/lstPacientes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="19sp" />
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Prova</string>
+    <string-array name="sexo">
+
+        <item>Feminino</item>
+        <item>Masculino</item>
+    </string-array>
+</resources>
